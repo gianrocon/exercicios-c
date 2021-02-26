@@ -10,7 +10,7 @@ int main()
     int espacoAcumulado = 0;        /* quantidade de espacos acumulados dentro da coluna, relevante quando >= 2  */
     int espacoAcumuladoIndex = 0;   /* index onde comecou a acumular espaco */
     char character;                 /* \n, \t, ' ', demais char com indexColuna 7, com indexColuna < 7  */
-    char texto[MAXSIZE];
+    char texto[MAXSIZE];            /* array que armazena a string */
 
     while ((character = getchar()) != EOF && index < MAXSIZE) {
         
@@ -66,10 +66,4 @@ int main()
     texto[index] = '\0';
 
     printf("%s", texto);
-    printf("********--------********--------********--------********--------********--------********--------********\n");
 }
-
-/* TODO
-   1- Colocar a logistica de comer os espacos em branco no if \n
-   2- Procurar aquele bug do tracinho
-*/
