@@ -7,7 +7,7 @@ int main()
 {
 
     // strlend
-        char a[20] = "Elemental";
+    char a[20] = "Elemental";
     char b[20] = {'E', 'l', 'e', 'm', 'e', 'n', 't', 'a', 'l', '\0'};
 
     printf("char a length (strlen) = %zu\n", strlen(a));
@@ -15,8 +15,24 @@ int main()
     
     printf("char a length (strlen2) = %zu\n", strlen2(a));
     printf("char b length (strlen2) = %zu\n", strlen2(b));
-    
-    // octal e hexadecimal 
+
+    /*
+    \a       alert (bell) character
+    \b       backspace
+    \f       formfeed
+    \n       newline
+    \r       carriage return
+    \t       horizontal tab
+    \v       vertical tab
+    \\       backslash
+    \?       question mark
+    \′       single quote
+    \"       double quote
+    \ooo  octal number
+    \xhh  hexadecimal number
+    */
+
+    // octal e hexadecimal
     int octal = 012;
     int hexadecimal = 0x12;
 
@@ -35,6 +51,25 @@ int main()
     printf("%d\t %c\n", char2Octal, char2Octal);
     printf("%d\t %c\n", char3Hexadecimal, char3Hexadecimal);
     printf("%d\t %c\n", charLiteral, charLiteral);
+
+    // enumeration constant
+    enum escapes {BELL = '\a', BACKSPACE = '\b', TAB = '\t'}; // especificado os integer
+    enum boolean {NO, YES}; // por padrao, 0, 1, 0, 1, 0... quando não especificado
+    enum months {JAN = 1, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC}; // não especificados após ultimo especificado progridem 
+
+    printf("TAB %d\n", TAB);
+    printf("YES %d\n", YES);
+    printf("MAY %d\n", MAY);
+
+    // constant variable
+    const float eps = 1e-5;
+    const char msg[] = "Warning:";
+    // eps = 1e-4; // ERRO, não pode ser alterada
+    // msg[0] = 'w'; // ERRO não pode ser alterada
+    printf("%f\n", eps);
+    printf("%s\n", msg);
+
+
 
 }
 
