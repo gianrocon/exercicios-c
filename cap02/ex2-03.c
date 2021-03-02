@@ -23,6 +23,7 @@ int main()
 // Função htoi para converter strings de digitos hexadecimais em seu valor inteiro
 // Retorna o valor em INT
 // Opcional utilizar a notação hexadecimal 0x ou 0x no inicio da string
+// Retorna 0 caso numero decimal inválido
 int htoi(char s[])
 {
     int i = 0;
