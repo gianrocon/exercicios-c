@@ -23,7 +23,7 @@ int main()
 // Função htoi para converter strings de digitos hexadecimais em seu valor inteiro
 // Retorna o valor em INT
 // Opcional utilizar a notação hexadecimal 0x ou 0x no inicio da string
-// Retorna 0 caso numero decimal inválido
+// Retorna 0 caso numero hexadecimal inválido
 int htoi(char s[])
 {
     int i = 0;
@@ -51,7 +51,7 @@ int htoi(char s[])
 
     // O loop lê os digitos do array da esquerda para direita 
     // Extrai o valor absoluto (inteiro) de cada 'digitoHexa' e armazena em 'valorAbsoluto'
-    // Retorna 0 caso numero decimal inválido
+    // Retorna 0 caso numero hexadecimal inválido
     // Na sequencia estabelece o 'valorRelativo' à sua posição multiplicando pela potencia de base=16, expoente=casa hexadecimal
     // Por fim, vai somando os 'valorRelativo's para retornar o valor total 'resultado'
     while ((digitoHexa = s[i]) != '\0') {
