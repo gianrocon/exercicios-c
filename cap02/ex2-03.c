@@ -50,10 +50,10 @@ int htoi(char s[])
     expoente = nDigitos - 1;
 
     // O loop lê os digitos do array da esquerda para direita 
-    // Extrai o valor absoluto (inteiro) de cada 'digitoHexa' e armazenaa em 'valorAbsoluto'
+    // Extrai o valor absoluto (inteiro) de cada 'digitoHexa' e armazena em 'valorAbsoluto'
     // Retorna 0 caso numero decimal inválido
     // Na sequencia estabelece o 'valorRelativo' à sua posição multiplicando pela potencia de base=16, expoente=casa hexadecimal
-    // Por fim, vai somando os 'valorRelativo's para retornar o valor total 'Resultado'
+    // Por fim, vai somando os 'valorRelativo's para retornar o valor total 'resultado'
 
     while ((digitoHexa = s[i]) != '\0') {
 
