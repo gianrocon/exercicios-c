@@ -12,7 +12,7 @@ int htoi(char s[]);
 
 int main()
 {
-    char hex[MAXDIGITS] = "0X12C";
+    char hex[MAXDIGITS] = "0x12C";
 
     printf("%d\n", htoi(hex));
     return 0;
@@ -50,8 +50,9 @@ int htoi(char s[])
 
     // O loop lê os digitos do array da esquerda para direita 
     // Extrai o valor absoluto (inteiro) de cada 'digitoHexa' e armazenaa em 'valorAbsoluto'
+    // Retorna 0 caso numero decimal inválido
     // Na sequencia estabelece o 'valorRelativo' à sua posição multiplicando pela potencia de base=16, expoente=casa hexadecimal
-    // Por fim, vai somando os 'valorRelativo's para retornar o valor total 'Resultado' 
+    // Por fim, vai somando os 'valorRelativo's para retornar o valor total 'Resultado'
 
     while ((digitoHexa = s[i]) != '\0') {
 
@@ -63,6 +64,9 @@ int htoi(char s[])
 
         else if ('a' <= digitoHexa && digitoHexa <= 'f')
             valorAbsoluto = digitoHexa - 'a' + 10;
+
+        else
+            return 0;
 
         valorRelativo = valorAbsoluto*pot(16, expoente);
         resultado += valorRelativo;
