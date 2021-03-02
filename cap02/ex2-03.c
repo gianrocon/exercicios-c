@@ -54,7 +54,6 @@ int htoi(char s[])
     // Retorna 0 caso numero decimal inválido
     // Na sequencia estabelece o 'valorRelativo' à sua posição multiplicando pela potencia de base=16, expoente=casa hexadecimal
     // Por fim, vai somando os 'valorRelativo's para retornar o valor total 'resultado'
-
     while ((digitoHexa = s[i]) != '\0') {
 
         if ('0' <= digitoHexa && digitoHexa <= '9')
