@@ -9,8 +9,6 @@ int main(void)
     //12,3,2 0000001100 => 000000000011 => 3
 }
 
-
-
 unsigned getbits(unsigned x,int p,int n)
 {
     return (x >> (p+1-n)) & ~(~0 << n);
